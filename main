@@ -30,6 +30,18 @@
 
 [user@bastion ~]$ ./openshift-install create manifests --dir=ocp46  --log-level=debug
 
+Clone the mkmachineset repo from git lab
+--------------------------------------------
+1. get the cluster id from the manifest files already created. 
+2. Update the mk-machineset.sh file with cluster id and vsphere details
+datacenter="Datacenter"
+datastore="datastore1"
+vspheresrv="vsphere.example.com"
+3. Run the ./mk-machineset.sh vsphere command to create the manifest file. 
+4. check the manifest file for the following details given in the YML section.
+5. Copy the file to opeshift folder under the install dir. 
+6. run the create cluster command. 
+
 ---------------------------------------------
 
 apiVersion: machine.openshift.io/v1beta1
